@@ -9,4 +9,10 @@
   <insert id="addList"  >
     insert into movie (title) values ('something')
   </insert>
+  <select id="createTable" >
+  	create table testTable (
+	  id         bigint not null auto_increment primary key,
+	  title 	varchar(255)
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8
+  </select>
 </mapper>

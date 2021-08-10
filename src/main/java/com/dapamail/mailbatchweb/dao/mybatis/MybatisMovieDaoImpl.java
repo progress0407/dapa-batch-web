@@ -33,4 +33,8 @@ public class MybatisMovieDaoImpl implements MovieDao {
 		mapper.addList();
 	}
 
+	@Override
+	public void createTable() {
+		mapper.createTable();
+	}
 }

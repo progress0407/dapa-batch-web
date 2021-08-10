@@ -14,16 +14,21 @@ import com.dapamail.mailbatchweb.entity.Movie;
 public class SampleTestController {
 	
 	@Autowired
-	private MovieDao movieDao;
+	private MovieDao mapper;
 
 	@GetMapping("/foo")
 	public List<Movie> foo() {
-		return movieDao.getList();
+		return mapper.getList();
 	}
 	
 	@GetMapping("/boo")
 	@Scheduled(fixedDelay = 2000L)
 	public void addList() {
-		movieDao.addList();
+		mapper.addList();
+	}
+	
+	@GetMapping("/bar")
+	public void createTable() {
+		mapper.createTable();
 	}
 }
